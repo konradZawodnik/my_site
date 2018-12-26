@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Konrad Zawodnik - Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:400,700|Saira:300,400&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    function startTime() {
+      var today = new Date();
+      today.toISOString()
+      let year = today.getFullYear();
+      let month = today.getMonth() + 1;;
+      let day = today.getDate();;
+      let hour = today.getHours();
+      let minute = today.getMinutes();
+      let second = today.getSeconds();
+      minute = checkTime(minute);
+      second = checkTime(second);
+      document.getElementById('clock').innerHTML =
+        `Dzisiaj jest ${day}.${month}.${year}. Na zegarkach godzina ${hour}: ${minute}:${second}.`;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) { i = "0" + i };
+      return i;
+    }
+  </script>
+</head>
+
+<body onload="startTime()">
+  <header>
+    <div id="clock"> </div>
+    <div class="welcome">
+     <p>Witam!</p>
+      <h1>Jestem Konrad Zawodnik</h1>
+      <h2>Developer/Tester</h2>
+      <form>
+        <button formaction="https://github.com/konradZawodnik">Zobacz moje portfolio</button>
+      </form>
+    </div>
+    <img src="images/photo1.jpg" alt="Zdjęcie Konrad Zawodnik">
+  </header>
+  <section class="features clearfix">
+    <h1>Tworzę bardzo dobre strony internetowe</h1>
+    <div class="feature">
+      <img src="images/services1.png" alt="loga html js i css">
+      <h2>Nowoczesne i zgodne z aktualnymi standardami</h2>
+      <p class="description"></p>
+    </div>
+    <div class="feature">
+      <img src="images/services2.png" alt="loga html js i css">
+      <h2>Zoptymalizowanie pod kątem wyszukiwarek internetowych</h2>
+      <p class="description"></p>
+    </div>
+    <div class="feature">
+      <img src="images/services3.png" alt="loga html js i css">
+      <h2>Świetnie wyglądające na urzedziach mobilnych</h2>
+      <p class="description"></p>
+    </div>
+
+  </section>
+  <section class="slogan">
+    <div class="bg">
+      <h1> O mnie</h1>
+      <p class="text">Pracuje w firmie IT Run Consulting sp. z o.o., w której zajmuje
+        się pisaniem testów jednostkowych(unit testów), testów integracyjnych dla JavaScript oraz tworzeniem testów
+        komponentów w React, js w projekcie dotyczącym instytucji finansowej.
+        Zajmuje się też tworzeniem procesów wdrożeń na środowisko testowe oraz produkcyjne.
+      </p>
+    </div>
+  </section>
+
+  <section class="hobby clearfix">
+    <h1>W wolnym czasie uwielbiam</h1>
+    <div class="item">
+      <p>Grać w piłkę nożną</p>
+    </div>
+    <div class="item">
+      <p>Chodzić na siłownię</p>
+    </div>
+    <div class="item">
+      <p>Programować</p>
+    </div>
+    <div class="item">
+      <p>Zdrowo się odżywiać</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h1>Skontaktuj się ze mną</h1>
+    <div class="wrap clearfix">
+      <div class="socials">
+        <div class="social clearfix"><img src="images/contact1.png" alt="kontakt"><span>konrad.zawodnik@wp.pl</span></div>
+        <div class="social clearfix"><img src="images/contact2.png" alt="kontakt"><span>514851101</span></div>
+        <a href="https://www.linkedin.com/in/konrad-zawodnik-095066148/">
+          <div class="social clearfix"><img src="images/contact5.png" alt="kontakt"><span>konradzawodnik</span></div>
+        </a>
+      </div>
+      <!--formaction="https://www.linkedin.com/in/konrad-zawodnik-095066148/"-->
+    </div>
+
+  </section>
+
+  <footer>&copy; Konrad Zawodnik</footer>
+</body>
+
+</html>
