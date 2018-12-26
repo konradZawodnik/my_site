@@ -89,6 +89,9 @@ header button {
 }
 
 @media (orientation: portrait) and (min-width: 300px) {
+  header #clock{
+    font-size: 18px;
+  }
   header h1 {
     font-size: 22px;
   }
