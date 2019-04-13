@@ -2,8 +2,8 @@ const startTime = () => {
   let today = new Date();
   today.toISOString()
   let year = today.getFullYear();
-  let month = today.getMonth() + 1;;
-  let day = today.getDate();;
+  let month = today.getMonth() + 1;
+  let day = today.getDate();
   let hour = today.getHours();
   let minute = today.getMinutes();
   let second = today.getSeconds();
