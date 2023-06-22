@@ -48,7 +48,7 @@ header img {
   height: 50%;
   bottom: 0;
   right: 0;
-  left: 50%
+  left: 50%;
 }
 
 header div.welcome {
@@ -110,6 +110,14 @@ header button {
   }
 }
 
+@media (orientation: portrait) and (min-width: 270px) and (max-width: 299px) {
+  header img {
+    bottom: -3%;
+    left: 0%;
+    top: 42%;
+  }
+}
+
 @media (orientation: portrait) and (min-width: 360px) {
   header h1 {
     font-size: 22px;
@@ -125,7 +133,8 @@ header button {
   }
   header img {
     right: -20%;
-    left: 15%
+    left: 7%;
+    top: 38%;
   }
 }
 
@@ -145,14 +154,40 @@ header button {
 
   header img {
     right: -20%;
-    left: 14%
+    left: 23%;
+    top: 52%;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 373px) and (max-width: 377px) {
+  header img {
+    bottom: -3%;
+    left: 12%;
+    top: 41%;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 390px) and (max-width: 395px) {
+  header img {
+    bottom: -3%;
+    left: 4%;
+    top: 34%;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 411px) and (max-width: 416px) {
+  header img {
+    bottom: -3%;
+    left: 3%;
+    top: 39%;
   }
 }
 
 @media (orientation: portrait) and (min-width: 500px) {
   header img {
     bottom: -3%;
-    left: 20%;
+    left: 22%;
+    top: 46%;
   }
 }
 
@@ -175,7 +210,8 @@ header button {
 
   header img {
     right: -20%;
-    left: 25%
+    left: 21%;
+    top: 42%;
   }
 }
 
@@ -207,6 +243,11 @@ header button {
   header button {
     font-size: 16px;
     line-height: 40px;
+  }
+  header img {
+    height: 80%;
+    bottom: 0;
+    right: -5%;
   }
 }
 
