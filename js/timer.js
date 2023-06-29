@@ -34,7 +34,7 @@ const startTime = () => {
       break;
   }
   document.getElementById('clock').innerHTML =
-    `Dzisiaj jest ${nameOfDay} ${day}.${month}.${year}, godzina ${hour}:${minute}:${second}.`;
+    `Dzisiaj jest ${nameOfDay} ${day}.${month < 10 ? `0${month}` : month}.${year}, godzina ${hour}:${minute}:${second}.`;
   let t = setTimeout(startTime, 500);
 }
 const checkTime = (i) => {
