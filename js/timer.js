@@ -37,7 +37,4 @@ const startTime = () => {
     `Dzisiaj jest ${nameOfDay} ${day}.${month < 10 ? `0${month}` : month}.${year}, godzina ${hour}:${minute}:${second}.`;
   let t = setTimeout(startTime, 500);
 }
-const checkTime = (i) => {
-  if (i < 10) { i = `0${i}` };
-  return i;
-}
+const checkTime = (i) => i < 10 ? `0${i}` : i;
