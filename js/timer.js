@@ -1,6 +1,6 @@
 const startTime = () => {
   let today = new Date();
-  today.toISOString()
+  today.toISOString();
   let year = today.getFullYear();
   let month = today.getMonth() + 1;
   let day = today.getDate();
@@ -24,7 +24,7 @@ const startTime = () => {
       nameOfDay = "Środa";
       break;
     case 4:
-      nameOfDay = "Czwartek"
+      nameOfDay = "Czwartek";
       break;
     case 5:
       nameOfDay = "Piątek";
@@ -33,8 +33,48 @@ const startTime = () => {
       nameOfDay = "Sobota";
       break;
   }
-  document.getElementById('clock').innerHTML =
-    `Dzisiaj jest ${nameOfDay} ${day}.${month < 10 ? `0${month}` : month}.${year}, godzina ${hour}:${minute}:${second}.`;
-  let t = setTimeout(startTime, 500);
-}
-const checkTime = (i) => i < 10 ? `0${i}` : i;
+  let nameOfMonth;
+  switch (month) {
+    case 1:
+      nameOfMonth = "Stycznia";
+      break;
+    case 2:
+      nameOfMonth = "Lutego";
+      break;
+    case 3:
+      nameOfMonth = "Marca";
+      break;
+    case 4:
+      nameOfMonth = "Kwietnia";
+      break;
+    case 5:
+      nameOfMonth = "Maja";
+      break;
+    case 6:
+      nameOfMonth = "Czerwca";
+      break;
+    case 7:
+      nameOfMonth = "Lipca";
+      break;
+    case 8:
+      nameOfMonth = "Sierpnia";
+      break;
+    case 9:
+      nameOfMonth = "Września";
+      break;
+    case 10:
+      nameOfMonth = "Października";
+      break;
+    case 11:
+      nameOfMonth = "Listopada";
+      break;
+    case 12:
+      nameOfMonth = "Grudnia";
+      break;
+  }
+  document.getElementById(
+    "clock"
+  ).innerHTML = `Dzisiaj jest ${nameOfDay} ${day} ${nameOfMonth} ${year} roku. Godzina ${hour}:${minute}:${second}.`;
+  setTimeout(startTime, 500);
+};
+const checkTime = (i) => (i < 10 ? `0${i}` : i);
