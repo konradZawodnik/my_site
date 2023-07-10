@@ -74,7 +74,7 @@ const startTime = () => {
   }
   document.getElementById(
     "clock"
-  ).innerHTML = `Dzisiaj jest ${nameOfDay} ${day} ${nameOfMonth} ${year} roku. Godzina ${hour}:${minute}:${second}.`;
+  ).innerHTML = `Dzisiaj jest ${nameOfDay} ${day} ${nameOfMonth} ${year} roku. Godzina: ${hour}:${minute}:${second}`;
   setTimeout(startTime, 500);
 };
 const checkTime = (i) => (i < 10 ? `0${i}` : i);
